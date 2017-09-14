@@ -1,1 +1,1 @@
-# bouncy_ball
+# 3 shapes bouncing at 3 speeds

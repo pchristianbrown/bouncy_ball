@@ -1,0 +1,60 @@
+
+body {
+display: flex;
+justify-content: left;
+}
+
+.ball {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background-color: #FE7847;
+
+animation: bounce 0.9s;
+animation-direction: alternate;
+animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+animation-iteration-count: infinite;
+}
+
+.ball1 {
+width: 150px;
+height: 150px;
+border-radius: 33%;
+background-color: #CA2C3F;
+
+animation: bounce 0.5s;
+animation-direction: alternate;
+animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+animation-iteration-count: infinite;
+}
+
+.ball2 {
+width: 75px;
+height: 75px;
+border-radius: 50%;
+background-color: #4C0B2F;
+
+animation: bounce 0.3s;
+animation-direction: alternate;
+animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+from { transform: translate3d(0, 0, 0);     }
+to   { transform: translate3d(0, 320px, 0); }
+}
+
+/* Prefix Support */
+ball, ball1, ball2 {
+-webkit-animation-name: bounce;
+-webkit-animation-duration: 0.5s;
+-webkit-animation-direction: alternate;
+-webkit-animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+to   { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 320px, 0); }
+}
